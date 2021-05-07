@@ -7,7 +7,7 @@ const GetData = () => {
   const [clicked, setClicked] = useState(false)
   const GetData = async () => {
     setClicked(true)
-    await axios('http://localhost:3002/').then((res) => {
+    await axios('https://fileupload-backend-raj.herokuapp.com/').then((res) => {
       if (res.data) {
         console.log(res.data)
         setCheck(true)

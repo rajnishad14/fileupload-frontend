@@ -17,7 +17,9 @@ const FileUpload = () => {
   }
   const handleUpload = async () => {
     file.forEach((item) => {
-      axios.post('http://localhost:3002', item).then((res) => console.log(res))
+      axios
+        .post('https://fileupload-backend-raj.herokuapp.com/', item)
+        .then((res) => console.log(res))
     })
   }
   return (
