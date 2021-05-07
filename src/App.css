@@ -1,38 +1,170 @@
-.App {
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* blobal styles */
+:root {
+  --clr-1: #001524;
+  --clr-2: #15616d;
+  --clr-3: #ffecd1;
+  --clr-4: #ff7d00;
+  --clr-5: #78290f;
+}
+body {
+  background-color: var(--clr-1);
+}
+
+/* file upload */
+.file-upload {
+  position: relative;
+  width: 60%;
+  margin: 3rem auto;
   text-align: center;
+  padding: 2%;
+  background-color: white;
+  border-radius: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.file-upload input {
+  height: 30px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.file-upload button {
+  background-color: var(--clr-5);
+  height: 30px;
+  padding: 3px;
+  cursor: pointer;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.log {
+  position: absolute;
+  right: 2%;
+  top: 2%;
+  background-color: var(--clr-1) !important;
+  color: white;
+  cursor: pointer;
+}
+.log:hover {
+  position: absolute;
+  right: 2%;
+  top: 2%;
+  background-color: var(--clr-3) !important;
+  color: black;
+}
+.file-upload button:hover {
+  background-color: var(--clr-3);
+  height: 30px;
+  padding: 3px;
+  color: black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* get Data */
+.getdata {
+  width: 60%;
+  margin: 3rem auto;
+  text-align: center;
+  padding: 2%;
+  background-color: white;
+  border-radius: 10px;
+}
+.getdata button {
+  background-color: var(--clr-5);
+  width: 80px;
+  height: 30px;
+  color: white;
+  cursor: pointer;
+}
+.getdata button:hover {
+  background-color: var(--clr-3);
+  width: 80px;
+  height: 30px;
+  color: var(--clr-5);
+}
+
+.all-data {
+  width: 100%;
+  margin: 5px;
+  margin-top: 1rem;
+}
+.data {
+  margin: 5px;
+  background-color: var(--clr-2);
+  border-radius: 10px;
+  padding: 5px;
+  position: relative;
+  border-radius: 10px;
+}
+#id {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  color: var(--clr-3);
+}
+#user-id {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: var(--clr-3);
+}
+#title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: 60%;
+  margin: 0 auto;
+  font-family: 'Times New Roman', Times, serif;
+  letter-spacing: 3px;
+  color: white;
+}
+#body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: justify;
+  color: whitesmoke;
+  margin-top: 2rem;
+}
+
+.json {
+  width: fit-content;
+  margin: 0 auto;
+  text-align: justify;
+}
+.instruction {
+  background-color: var(--clr-2);
+  color: whitesmoke;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 1rem;
+}
+
+/* login logout */
+.container {
+  height: 300px;
+  width: 300px;
+  color: white;
+}
+.container img {
+  height: 100%;
+  width: 100%;
+}
+.container button {
+  height: 30px;
+  padding: 5px;
+  background-color: var(--clr-2);
+  color: white;
+  cursor: pointer;
+}
+.container button:hover {
+  height: 30px;
+  padding: 5px;
+  background-color: var(--clr-3);
+  color: var(--clr-1);
+}
+
+@media screen and (max-width: 720px) {
+  .getdata {
+    width: 80%;
   }
-  to {
-    transform: rotate(360deg);
+  .file-upload {
+    width: 80%;
   }
 }
